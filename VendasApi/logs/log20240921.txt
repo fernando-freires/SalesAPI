@@ -1,0 +1,21 @@
+2024-09-21 01:01:31.191 -04:00 [INF] Iniciando a aplicação
+2024-09-21 01:01:40.932 -04:00 [INF] Obtendo todas as vendas.
+2024-09-21 01:01:56.352 -04:00 [INF] Obtendo venda com ID "3fa85f64-5717-4562-b3fc-2c963f66afa6".
+2024-09-21 01:01:56.428 -04:00 [INF] Venda "3fa85f64-5717-4562-b3fc-2c963f66afa6" obtida com sucesso.
+2024-09-21 01:06:01.224 -04:00 [INF] Iniciando a criação de uma nova venda.
+2024-09-21 01:06:01.393 -04:00 [INF] Venda "0760eec1-ad2a-4f82-8c3a-b564c8234ed8" criada com sucesso.
+2024-09-21 01:09:31.498 -04:00 [INF] Iniciando a aplicação
+2024-09-21 01:09:37.090 -04:00 [INF] Obtendo todas as vendas.
+2024-09-21 01:14:26.688 -04:00 [INF] Iniciando a aplicação
+2024-09-21 01:14:38.621 -04:00 [INF] Venda {venda.Id} registrada com sucesso.
+2024-09-21 01:15:26.761 -04:00 [INF] Iniciando a aplicação
+2024-09-21 01:15:41.806 -04:00 [INF] Venda {venda.Id} registrada com sucesso.
+2024-09-21 01:17:29.259 -04:00 [INF] Iniciando a aplicação
+2024-09-21 01:18:17.308 -04:00 [INF] Venda "396ff17c-d74b-4d42-ab57-5c3f24fb2e27" registrada com sucesso.
+2024-09-21 01:18:49.116 -04:00 [INF] Obtendo todas as vendas.
+2024-09-21 01:19:41.775 -04:00 [INF] Obtendo venda com ID "396ff17c-d74b-4d42-ab57-5c3f24fb2e27".
+2024-09-21 01:19:41.828 -04:00 [INF] Venda "396ff17c-d74b-4d42-ab57-5c3f24fb2e27" obtida com sucesso.
+2024-09-21 01:20:13.617 -04:00 [INF] Atualizando venda com ID "396ff17c-d74b-4d42-ab57-5c3f24fb2e27".
+2024-09-21 01:20:13.733 -04:00 [INF] Venda "396ff17c-d74b-4d42-ab57-5c3f24fb2e27" atualizada com sucesso.
+2024-09-21 01:20:24.352 -04:00 [INF] Cancelando venda com ID "396ff17c-d74b-4d42-ab57-5c3f24fb2e27".
+2024-09-21 01:20:24.393 -04:00 [INF] Venda "396ff17c-d74b-4d42-ab57-5c3f24fb2e27" cancelada com sucesso.

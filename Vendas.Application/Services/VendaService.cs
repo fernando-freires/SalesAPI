@@ -1,6 +1,8 @@
 using Vendas.Domain;
 using Microsoft.EntityFrameworkCore;
 using Vendas.Data.Context;
+using Microsoft.Extensions.Logging;
+
 namespace Vendas.Application.Services
 {
     public interface IVendaService
@@ -15,55 +17,76 @@ namespace Vendas.Application.Services
     public class VendaService : IVendaService
     {
         private readonly VendasContext _context;
+        private readonly ILogger<VendaService> _logger;
 
-        public VendaService(VendasContext context)
+        public VendaService(VendasContext context, ILogger<VendaService> logger)
         {
             _context = context;
+            _logger = logger;  
         }
 
-        public async Task<Venda> CriarVendaAsync(Venda venda)
+       public async Task<Venda> CriarVendaAsync(Venda venda)
         {
-            venda.Id = Guid.NewGuid(); 
+            venda.Id = Guid.NewGuid();
+            
             foreach (var item in venda.Itens)
             {
                 item.ProdutoId = Guid.NewGuid();  
+                item.VendaId = venda.Id;
             }
+
             _context.Vendas.Add(venda);
             await _context.SaveChangesAsync();
+            
+            _logger.LogInformation("Venda {VendaId} registrada com sucesso.", venda.Id);  
+            
             return venda;
         }
 
         public async Task<Venda> ObterVendaPorIdAsync(Guid id)
         {
+            _logger.LogInformation("Obtendo venda com ID {VendaId}.", id);  
             var venda = await _context.Vendas.Include(v => v.Itens).FirstOrDefaultAsync(v => v.Id == id);
             
             if (venda == null)
             {
+                _logger.LogWarning("Venda com ID {VendaId} não foi encontrada.", id);  
                 throw new Exception("Venda não encontrada.");
             }
-            
+
+            _logger.LogInformation("Venda {VendaId} obtida com sucesso.", id);  
             return venda;
         }
 
         public async Task<IEnumerable<Venda>> ObterVendasAsync()
         {
+            _logger.LogInformation("Obtendo todas as vendas.");  
             return await _context.Vendas.Include(v => v.Itens).ToListAsync();
         }
 
         public async Task<Venda> AtualizarVendaAsync(Venda venda)
         {
+            _logger.LogInformation("Atualizando venda com ID {VendaId}.", venda.Id);  
             _context.Vendas.Update(venda);
             await _context.SaveChangesAsync();
+            _logger.LogInformation("Venda {VendaId} atualizada com sucesso.", venda.Id);  
             return venda;
         }
 
         public async Task<bool> CancelarVendaAsync(Guid id)
         {
+            _logger.LogInformation("Cancelando venda com ID {VendaId}.", id);  
             var venda = await _context.Vendas.FindAsync(id);
-            if (venda == null) return false;
+            if (venda == null)
+            {
+                _logger.LogWarning("Venda com ID {VendaId} não foi encontrada para cancelamento.", id);  
+                return false;
+            }
 
             _context.Vendas.Remove(venda);
-            await _context.SaveChangesAsync(); 
+            await _context.SaveChangesAsync();
+            
+            _logger.LogInformation("Venda {VendaId} cancelada com sucesso.", id);  
             return true;
         }
     }

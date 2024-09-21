@@ -1,10 +1,21 @@
+using Serilog;
 using Microsoft.EntityFrameworkCore;
 using Vendas.Data.Context;
 using Vendas.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Configurar o Serilog
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration) // Lê as configurações do arquivo appsettings.json, se aplicável
+    .Enrich.FromLogContext()
+    .WriteTo.Console() // Log no console
+    .WriteTo.File("logs/vendas_log.txt", rollingInterval: RollingInterval.Day) // Log em arquivo, separado por dias
+    .CreateLogger();
+
+builder.Host.UseSerilog(); // Usar Serilog como o logger padrão
+
+// Adicionar serviços ao contêiner
 builder.Services.AddDbContext<VendasContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -30,13 +41,13 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
     });
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Configuração do Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configurar o pipeline de requisição HTTP
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -51,4 +62,16 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+try
+{
+    Log.Information("Iniciando a aplicação");
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "A aplicação falhou ao iniciar");
+}
+finally
+{
+    Log.CloseAndFlush();
+}

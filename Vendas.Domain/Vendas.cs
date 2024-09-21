@@ -22,6 +22,6 @@ namespace Vendas.Domain
         public decimal ValorTotal => (ValorUnitario * Quantidade) - Desconto;
         public bool Cancelado { get; set; }
         public Guid VendaId { get; set; }
-        public Venda Venda { get; set; } = null!;
+        public Venda? Venda { get; set; }
     }
 }
