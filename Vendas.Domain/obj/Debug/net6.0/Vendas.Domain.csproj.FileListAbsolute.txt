@@ -1,0 +1,12 @@
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/bin/Debug/net6.0/Vendas.Domain.deps.json
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/bin/Debug/net6.0/Vendas.Domain.dll
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/bin/Debug/net6.0/Vendas.Domain.pdb
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/obj/Debug/net6.0/Vendas.Domain.csproj.AssemblyReference.cache
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/obj/Debug/net6.0/Vendas.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/obj/Debug/net6.0/Vendas.Domain.AssemblyInfoInputs.cache
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/obj/Debug/net6.0/Vendas.Domain.AssemblyInfo.cs
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/obj/Debug/net6.0/Vendas.Domain.csproj.CoreCompileInputs.cache
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/obj/Debug/net6.0/Vendas.Domain.dll
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/obj/Debug/net6.0/refint/Vendas.Domain.dll
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/obj/Debug/net6.0/Vendas.Domain.pdb
+/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/obj/Debug/net6.0/ref/Vendas.Domain.dll
