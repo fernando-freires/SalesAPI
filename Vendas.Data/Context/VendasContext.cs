@@ -16,6 +16,24 @@ namespace Vendas.Data.Context
             
             modelBuilder.Entity<ItemVenda>()
                 .HasKey(i => i.ProdutoId);
+
+            modelBuilder.Entity<ItemVenda>()
+                .HasOne(i => i.Venda)
+                .WithMany(v => v.Itens)
+                .HasForeignKey(i => i.VendaId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<ItemVenda>()
+                .Property(i => i.ValorUnitario)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<ItemVenda>()
+                .Property(i => i.Desconto)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Venda>()
+                .Property(v => v.ValorTotal)
+                .HasColumnType("decimal(18,2)");
         }
     }
 }

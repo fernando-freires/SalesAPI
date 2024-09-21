@@ -33,9 +33,16 @@ namespace Vendas.Application.Services
             return venda;
         }
 
-        public async Task<Venda?> ObterVendaPorIdAsync(Guid id)
+        public async Task<Venda> ObterVendaPorIdAsync(Guid id)
         {
-            return await _context.Vendas.Include(v => v.Itens).FirstOrDefaultAsync(v => v.Id == id);
+            var venda = await _context.Vendas.Include(v => v.Itens).FirstOrDefaultAsync(v => v.Id == id);
+            
+            if (venda == null)
+            {
+                throw new Exception("Venda não encontrada.");
+            }
+            
+            return venda;
         }
 
         public async Task<IEnumerable<Venda>> ObterVendasAsync()
@@ -54,9 +61,9 @@ namespace Vendas.Application.Services
         {
             var venda = await _context.Vendas.FindAsync(id);
             if (venda == null) return false;
-            venda.Cancelada = true;
-            _context.Vendas.Update(venda);
-            await _context.SaveChangesAsync();
+
+            _context.Vendas.Remove(venda);
+            await _context.SaveChangesAsync(); 
             return true;
         }
     }
