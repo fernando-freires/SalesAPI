@@ -19,3 +19,5 @@
 2024-09-21 01:20:13.733 -04:00 [INF] Venda "396ff17c-d74b-4d42-ab57-5c3f24fb2e27" atualizada com sucesso.
 2024-09-21 01:20:24.352 -04:00 [INF] Cancelando venda com ID "396ff17c-d74b-4d42-ab57-5c3f24fb2e27".
 2024-09-21 01:20:24.393 -04:00 [INF] Venda "396ff17c-d74b-4d42-ab57-5c3f24fb2e27" cancelada com sucesso.
+2024-09-21 16:44:34.752 -04:00 [INF] Iniciando a aplicação
+2024-09-21 16:44:42.079 -04:00 [INF] Obtendo todas as vendas.
