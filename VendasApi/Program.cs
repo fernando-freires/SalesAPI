@@ -22,12 +22,14 @@ builder.Services.AddCors(options =>
 // Registrar o IVendaService e VendaService no contêiner de DI
 builder.Services.AddScoped<IVendaService, VendaService>();
 
-// builder.Services.AddControllers();
+// Configuração do JSON para lidar com ciclos de referência
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
         options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
     });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
