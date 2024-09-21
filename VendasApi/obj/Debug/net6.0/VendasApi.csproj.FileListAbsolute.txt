@@ -1,10 +1,3 @@
-/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.csproj.AssemblyReference.cache
-/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.GeneratedMSBuildEditorConfig.editorconfig
-/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.AssemblyInfoInputs.cache
-/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.AssemblyInfo.cs
-/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.csproj.CoreCompileInputs.cache
-/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.MvcApplicationPartsAssemblyInfo.cs
-/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.MvcApplicationPartsAssemblyInfo.cache
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/appsettings.Development.json
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/appsettings.json
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/VendasApi
@@ -12,9 +5,11 @@
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/VendasApi.runtimeconfig.json
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/VendasApi.dll
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/VendasApi.pdb
+/Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Humanizer.dll
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Microsoft.Data.SqlClient.dll
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Microsoft.Identity.Client.dll
@@ -53,6 +48,13 @@
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Vendas.Application.pdb
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Vendas.Data.pdb
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Vendas.Domain.pdb
+/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.csproj.AssemblyReference.cache
+/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.AssemblyInfoInputs.cache
+/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.AssemblyInfo.cs
+/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.csproj.CoreCompileInputs.cache
+/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.MvcApplicationPartsAssemblyInfo.cs
+/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.MvcApplicationPartsAssemblyInfo.cache
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/staticwebassets.build.json
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/staticwebassets.development.json
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/scopedcss/bundle/VendasApi.styles.css
@@ -62,5 +64,3 @@
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.pdb
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/VendasApi.genruntimeconfig.cache
 /Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/Debug/net6.0/ref/VendasApi.dll
-/Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Humanizer.dll
-/Users/fernandofreires/Desktop/vendasAPI/VendasApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll

@@ -1,0 +1,26 @@
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+.vscode/
+
+# Ignore NuGet packages
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Ignore Rider and VS Code folders
+.idea/
+.vscode/
+
+# Ignore log files
+*.log
+
+# Ignore Mac files
+.DS_Store

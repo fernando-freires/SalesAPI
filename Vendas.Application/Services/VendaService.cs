@@ -1,3 +1,4 @@
+using Vendas.Domain;
 using Microsoft.EntityFrameworkCore;
 using Vendas.Data.Context;
 namespace Vendas.Application.Services
