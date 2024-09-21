@@ -21,11 +21,14 @@ namespace Vendas.Application.Services
 
         public VendaService(VendasContext context, ILogger<VendaService> logger)
         {
+            ArgumentNullException.ThrowIfNull(context, nameof(context));
+            ArgumentNullException.ThrowIfNull(logger, nameof(logger));
+            
             _context = context;
-            _logger = logger;  
+            _logger = logger;
         }
 
-       public async Task<Venda> CriarVendaAsync(Venda venda)
+        public async Task<Venda> CriarVendaAsync(Venda venda)
         {
             venda.Id = Guid.NewGuid();
             
@@ -39,19 +42,22 @@ namespace Vendas.Application.Services
             await _context.SaveChangesAsync();
             
             _logger.LogInformation("Venda {VendaId} registrada com sucesso.", venda.Id);  
-            
             return venda;
         }
 
         public async Task<Venda> ObterVendaPorIdAsync(Guid id)
         {
             _logger.LogInformation("Obtendo venda com ID {VendaId}.", id);  
-            var venda = await _context.Vendas.Include(v => v.Itens).FirstOrDefaultAsync(v => v.Id == id);
+        
+            var venda = await _context.Vendas
+                .Include(v => v.Itens)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(v => v.Id == id);
             
             if (venda == null)
             {
                 _logger.LogWarning("Venda com ID {VendaId} não foi encontrada.", id);  
-                throw new Exception("Venda não encontrada.");
+                throw new KeyNotFoundException($"Venda com ID {id} não foi encontrada.");
             }
 
             _logger.LogInformation("Venda {VendaId} obtida com sucesso.", id);  
@@ -61,7 +67,11 @@ namespace Vendas.Application.Services
         public async Task<IEnumerable<Venda>> ObterVendasAsync()
         {
             _logger.LogInformation("Obtendo todas as vendas.");  
-            return await _context.Vendas.Include(v => v.Itens).ToListAsync();
+        
+            return await _context.Vendas
+                .Include(v => v.Itens)
+                .AsNoTracking()
+                .ToListAsync();
         }
 
         public async Task<Venda> AtualizarVendaAsync(Venda venda)
@@ -69,6 +79,7 @@ namespace Vendas.Application.Services
             _logger.LogInformation("Atualizando venda com ID {VendaId}.", venda.Id);  
             _context.Vendas.Update(venda);
             await _context.SaveChangesAsync();
+            
             _logger.LogInformation("Venda {VendaId} atualizada com sucesso.", venda.Id);  
             return venda;
         }

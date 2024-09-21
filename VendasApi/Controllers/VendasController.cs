@@ -27,13 +27,16 @@ namespace VendasApi.Controllers
         {
             var venda = await _vendaService.ObterVendaPorIdAsync(id);
             if (venda == null)
-                return NotFound(); 
+                return NotFound();
             return Ok(venda);
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateVenda([FromBody] Venda venda)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             var createdVenda = await _vendaService.CriarVendaAsync(venda);
             return CreatedAtAction(nameof(GetVenda), new { id = createdVenda.Id }, createdVenda);
         }
@@ -41,8 +44,12 @@ namespace VendasApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateVenda(Guid id, [FromBody] Venda venda)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
             if (id != venda.Id)
-                return BadRequest();
+                return BadRequest("O ID da URL não corresponde ao ID da venda.");
+
             var updatedVenda = await _vendaService.AtualizarVendaAsync(venda);
             return Ok(updatedVenda);
         }
