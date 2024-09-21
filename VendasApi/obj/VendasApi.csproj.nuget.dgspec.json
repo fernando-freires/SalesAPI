@@ -4,14 +4,143 @@
     "/Users/fernandofreires/Desktop/vendasAPI/VendasApi/VendasApi.csproj": {}
   },
   "projects": {
-    "/Users/fernandofreires/Desktop/vendasAPI/VendasApi/VendasApi.csproj": {
+    "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Application/Vendas.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/fernandofreires/Desktop/vendasAPI/VendasApi/VendasApi.csproj",
-        "projectName": "VendasApi",
-        "projectPath": "/Users/fernandofreires/Desktop/vendasAPI/VendasApi/VendasApi.csproj",
+        "projectUniqueName": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Application/Vendas.Application.csproj",
+        "projectName": "Vendas.Application",
+        "projectPath": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Application/Vendas.Application.csproj",
         "packagesPath": "/Users/fernandofreires/.nuget/packages/",
-        "outputPath": "/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/",
+        "outputPath": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/fernandofreires/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Data/Vendas.Data.csproj": {
+                "projectPath": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Data/Vendas.Data.csproj"
+              },
+              "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/Vendas.Domain.csproj": {
+                "projectPath": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/Vendas.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.425/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Data/Vendas.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Data/Vendas.Data.csproj",
+        "projectName": "Vendas.Data",
+        "projectPath": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Data/Vendas.Data.csproj",
+        "packagesPath": "/Users/fernandofreires/.nuget/packages/",
+        "outputPath": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/fernandofreires/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/Vendas.Domain.csproj": {
+                "projectPath": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/Vendas.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.425/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/Vendas.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/Vendas.Domain.csproj",
+        "projectName": "Vendas.Domain",
+        "projectPath": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/Vendas.Domain.csproj",
+        "packagesPath": "/Users/fernandofreires/.nuget/packages/",
+        "outputPath": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/fernandofreires/.nuget/NuGet/NuGet.Config"
@@ -37,7 +166,77 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.425/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/fernandofreires/Desktop/vendasAPI/VendasApi/VendasApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/fernandofreires/Desktop/vendasAPI/VendasApi/VendasApi.csproj",
+        "projectName": "VendasApi",
+        "projectPath": "/Users/fernandofreires/Desktop/vendasAPI/VendasApi/VendasApi.csproj",
+        "packagesPath": "/Users/fernandofreires/.nuget/packages/",
+        "outputPath": "/Users/fernandofreires/Desktop/vendasAPI/VendasApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/fernandofreires/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Application/Vendas.Application.csproj": {
+                "projectPath": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Application/Vendas.Application.csproj"
+              },
+              "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Data/Vendas.Data.csproj": {
+                "projectPath": "/Users/fernandofreires/Desktop/vendasAPI/Vendas.Data/Vendas.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
