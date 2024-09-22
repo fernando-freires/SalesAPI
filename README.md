@@ -79,3 +79,13 @@ dotnet run
 ```bash
 http://localhost:5057/swagger/index.html
 ```
+
+### 7. Demonstração no terminal:
+
+Na imagem abaixo mostra o processo seguindo o passo a passo do README até chegar nas migrations do banco de dados
+![Minha Imagem](./migration.png)
+
+### 8. Logs da aplicação:
+
+Após finalizar as migrations e executar o comando cd ../VendasApi para ir ao diretório da API de fato, será inicializada a aplicação logo depois de executar o comando dotnet run. Segue a imagem demonstrando
+![Minha Imagem](./logs.png)
