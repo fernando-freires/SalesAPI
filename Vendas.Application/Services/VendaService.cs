@@ -47,12 +47,9 @@ namespace Vendas.Application.Services
 
         public async Task<Venda> ObterVendaPorIdAsync(Guid id)
         {
-            _logger.LogInformation("Obtendo venda com ID {VendaId}.", id);  
-        
             var venda = await _context.Vendas
-                .Include(v => v.Itens)
-                .AsNoTracking()
-                .FirstOrDefaultAsync(v => v.Id == id);
+                                    .Include(v => v.Itens)
+                                    .FirstOrDefaultAsync(v => v.Id == id);
             
             if (venda == null)
             {
@@ -60,9 +57,16 @@ namespace Vendas.Application.Services
                 throw new KeyNotFoundException($"Venda com ID {id} não foi encontrada.");
             }
 
-            _logger.LogInformation("Venda {VendaId} obtida com sucesso.", id);  
+            if (venda.Cancelada)
+            {
+                _logger.LogWarning("Venda com ID {VendaId} foi cancelada.", id);
+                throw new InvalidOperationException($"Venda com ID {id} foi cancelada.");
+            }
+
+            _logger.LogInformation("Venda {VendaId} obtida com sucesso.", id);
             return venda;
         }
+
 
         public async Task<IEnumerable<Venda>> ObterVendasAsync()
         {

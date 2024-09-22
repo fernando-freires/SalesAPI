@@ -25,11 +25,21 @@ namespace VendasApi.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetVenda(Guid id)
         {
-            var venda = await _vendaService.ObterVendaPorIdAsync(id);
-            if (venda == null)
-                return NotFound();
-            return Ok(venda);
+            try
+            {
+                var venda = await _vendaService.ObterVendaPorIdAsync(id);
+                return Ok(venda);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { message = ex.Message });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
         }
+
 
         [HttpPost]
         public async Task<IActionResult> CreateVenda([FromBody] Venda venda)

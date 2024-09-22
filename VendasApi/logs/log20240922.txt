@@ -1,0 +1,10 @@
+2024-09-22 00:00:09.532 -04:00 [INF] Iniciando a aplicação
+2024-09-22 00:00:18.227 -04:00 [WRN] Venda com ID "8b15b073-26b9-466b-8bdc-4d95080d9f1f" não foi encontrada.
+2024-09-22 00:00:31.845 -04:00 [INF] Cancelando venda com ID "8b15b073-26b9-466b-8bdc-4d95080d9f1f".
+2024-09-22 00:00:31.861 -04:00 [WRN] Venda com ID "8b15b073-26b9-466b-8bdc-4d95080d9f1f" não foi encontrada para cancelamento.
+2024-09-22 00:00:57.692 -04:00 [INF] Obtendo todas as vendas.
+2024-09-22 00:01:04.170 -04:00 [INF] Venda "59ec67d0-c7c8-4b7e-8f69-a2161c701a72" registrada com sucesso.
+2024-09-22 00:01:23.312 -04:00 [INF] Atualizando venda com ID "59ec67d0-c7c8-4b7e-8f69-a2161c701a72".
+2024-09-22 00:01:23.374 -04:00 [INF] Venda "59ec67d0-c7c8-4b7e-8f69-a2161c701a72" atualizada com sucesso.
+2024-09-22 00:01:30.049 -04:00 [INF] Cancelando venda com ID "59ec67d0-c7c8-4b7e-8f69-a2161c701a72".
+2024-09-22 00:01:30.087 -04:00 [INF] Venda "59ec67d0-c7c8-4b7e-8f69-a2161c701a72" cancelada com sucesso.

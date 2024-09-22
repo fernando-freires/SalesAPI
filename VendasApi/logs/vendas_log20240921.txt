@@ -74,3 +74,40 @@ Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: The database operati
 2024-09-21 17:02:38.698 -04:00 [INF] Venda "2e93720b-691f-4469-9e6a-acd95138ce15" atualizada com sucesso.
 2024-09-21 17:02:54.410 -04:00 [INF] Cancelando venda com ID "2e93720b-691f-4469-9e6a-acd95138ce15".
 2024-09-21 17:02:54.434 -04:00 [INF] Venda "2e93720b-691f-4469-9e6a-acd95138ce15" cancelada com sucesso.
+2024-09-21 23:43:22.074 -04:00 [INF] Iniciando a aplicação
+2024-09-21 23:45:15.164 -04:00 [INF] Obtendo todas as vendas.
+2024-09-21 23:47:19.681 -04:00 [INF] Venda "1f39d95f-c7ff-47aa-b05c-c386ffc0006d" registrada com sucesso.
+2024-09-21 23:48:04.373 -04:00 [INF] Venda "b7916916-cbd5-447d-b85f-b818e3f8e7eb" registrada com sucesso.
+2024-09-21 23:49:03.194 -04:00 [INF] Venda "18d8cf60-5666-4f32-a21e-857efb35e66c" registrada com sucesso.
+2024-09-21 23:50:02.043 -04:00 [INF] Venda "13227b8a-450b-4d57-a5c9-714229c3c30c" registrada com sucesso.
+2024-09-21 23:51:22.726 -04:00 [INF] Iniciando a aplicação
+2024-09-21 23:53:56.246 -04:00 [INF] Iniciando a aplicação
+2024-09-21 23:54:05.001 -04:00 [INF] Venda "8b15b073-26b9-466b-8bdc-4d95080d9f1f" registrada com sucesso.
+2024-09-21 23:54:15.347 -04:00 [INF] Obtendo todas as vendas.
+2024-09-21 23:56:06.742 -04:00 [INF] Atualizando venda com ID "8b15b073-26b9-466b-8bdc-4d95080d9f1f".
+2024-09-21 23:56:06.846 -04:00 [INF] Venda "8b15b073-26b9-466b-8bdc-4d95080d9f1f" atualizada com sucesso.
+2024-09-21 23:56:22.679 -04:00 [INF] Cancelando venda com ID "3fa85f64-5717-4562-b3fc-2c963f66afa6".
+2024-09-21 23:56:22.745 -04:00 [WRN] Venda com ID "3fa85f64-5717-4562-b3fc-2c963f66afa6" não foi encontrada para cancelamento.
+2024-09-21 23:56:38.016 -04:00 [INF] Cancelando venda com ID "8b15b073-26b9-466b-8bdc-4d95080d9f1f".
+2024-09-21 23:56:38.128 -04:00 [INF] Venda "8b15b073-26b9-466b-8bdc-4d95080d9f1f" cancelada com sucesso.
+2024-09-21 23:56:45.266 -04:00 [INF] Obtendo venda com ID "8b15b073-26b9-466b-8bdc-4d95080d9f1f".
+2024-09-21 23:56:45.304 -04:00 [WRN] Venda com ID "8b15b073-26b9-466b-8bdc-4d95080d9f1f" não foi encontrada.
+2024-09-21 23:56:45.308 -04:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Collections.Generic.KeyNotFoundException: Venda com ID 8b15b073-26b9-466b-8bdc-4d95080d9f1f não foi encontrada.
+   at Vendas.Application.Services.VendaService.ObterVendaPorIdAsync(Guid id) in /Users/fernandofreires/Desktop/ValidatingFlow/SalesAPI/Vendas.Application/Services/VendaService.cs:line 60
+   at VendasApi.Controllers.VendasController.GetVenda(Guid id) in /Users/fernandofreires/Desktop/ValidatingFlow/SalesAPI/VendasApi/Controllers/VendasController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-09-21 23:58:56.237 -04:00 [INF] Obtendo todas as vendas.

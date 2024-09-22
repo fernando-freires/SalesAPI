@@ -8,7 +8,7 @@ namespace Vendas.Data.Context
         public VendasContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<VendasContext>();
-            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=VendasDB;User Id=sa;Password=Your_password123;Trusted_Connection=False;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=VendasDB;User Id=sa;Password=YourPassword123;Trusted_Connection=False;MultipleActiveResultSets=true");
 
             return new VendasContext(optionsBuilder.Options);
         }

@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Vendas.Domain
 {
     public class Venda
@@ -22,6 +24,8 @@ namespace Vendas.Domain
         public decimal ValorTotal => (ValorUnitario * Quantidade) - Desconto;
         public bool Cancelado { get; set; }
         public Guid VendaId { get; set; }
+
+        [JsonIgnore]
         public Venda? Venda { get; set; }
     }
 }

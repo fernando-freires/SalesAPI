@@ -54,6 +54,12 @@ Abra o arquivo appsettings.json e atualize a string de conexão conforme seu amb
 }
 ```
 
+Vendas.Data.Context/DbContextFactory.cs também possui a string de conexão, verificar caso seja necessário alterar o acesso
+
+```bash
+optionsBuilder.UseSqlServer("Server=localhost,1433;Database=VendasDB;User Id=sa;Password=YourPassword123;
+```
+
 ### 4. Execute as migrações:
 
 ```bash
@@ -71,5 +77,5 @@ dotnet run
 ### 6. Acesse a documentação (Swagger):
 
 ```bash
-https://localhost:5001/swagger/index.html
+http://localhost:5057/swagger/index.html
 ```
