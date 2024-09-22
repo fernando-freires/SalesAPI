@@ -20,3 +20,6 @@
 2024-09-22 00:23:26.656 -04:00 [INF] Atualizando venda com ID "17bdc798-6800-4ce0-9608-205c3deec7f3".
 2024-09-22 00:23:26.679 -04:00 [INF] Venda "17bdc798-6800-4ce0-9608-205c3deec7f3" atualizada com sucesso.
 2024-09-22 00:23:34.524 -04:00 [INF] Venda "17bdc798-6800-4ce0-9608-205c3deec7f3" obtida com sucesso.
+2024-09-22 00:38:45.583 -04:00 [INF] Obtendo todas as vendas.
+2024-09-22 00:38:57.255 -04:00 [INF] Cancelando venda com ID "17bdc798-6800-4ce0-9608-205c3deec7f3".
+2024-09-22 00:38:57.398 -04:00 [INF] Venda "17bdc798-6800-4ce0-9608-205c3deec7f3" cancelada com sucesso.

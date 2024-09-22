@@ -89,3 +89,13 @@ Na imagem abaixo mostra o processo seguindo o passo a passo do README até chega
 
 Após finalizar as migrations e executar o comando cd ../VendasApi para ir ao diretório da API de fato, será inicializada a aplicação logo depois de executar o comando dotnet run. Segue a imagem demonstrando
 ![Minha Imagem](./logs.png)
+
+### O fluxo na imagem acima foi o seguinte:
+
+- Iniciei a aplicação
+- **(POST)** Registrei uma nova venda seguindo o payload padrão no Swagger
+- **(GET)** Consultei todas as vendas para verificar se a venda que criei havia sido registrada
+- **(GET/ID)** Tentei aplicar um `getById` passando um ID diferente e obtive o log informando que a venda não foi encontrada
+- **(GET/ID)** Passei o ID correto, porém a venda foi criada com o campo `"cancelada": true`, então ela não foi retornada
+- **(PUT)** Atualizei a venda alterando o campo `"cancelada": "false"`
+- **(GET/ID)** Após atualizar a venda, fiz um `getById` novamente e consegui obter a venda corretamente
