@@ -34,7 +34,7 @@ Uma API para gestão de vendas que inclui operações CRUD completas, implementa
 ### 1. Clone o repositório:
 
 ```bash
-https://github.com/fernando-freires/SalesAPI.git
+git clone https://github.com/fernando-freires/SalesAPI.git
 cd SalesAPI
 ```
 
