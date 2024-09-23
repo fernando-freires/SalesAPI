@@ -99,3 +99,11 @@ Após finalizar as migrations e executar o comando cd ../VendasApi para ir ao di
 - **(GET/ID)** Passei o ID correto, porém a venda foi criada com o campo `"cancelada": true`, então ela não foi retornada
 - **(PUT)** Atualizei a venda alterando o campo `"cancelada": "false"`
 - **(GET/ID)** Após atualizar a venda, fiz um `getById` novamente e consegui obter a venda corretamente
+
+## Testes
+
+### 1. Entre no diretório Vendas.Tests e execute o seguinte comando:
+
+```bash
+dotnet test
+```
